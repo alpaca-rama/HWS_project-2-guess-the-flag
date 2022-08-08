@@ -29,6 +29,10 @@ struct ContentView: View {
                 Text("Guess the flag")
                     .font(.largeTitle.bold())
                     .foregroundColor(.white)
+                Spacer()
+                Text("Question \(question) of \(numberOfQuestions)")
+                    .foregroundStyle(.primary)
+                    .font(.title.bold())
                 VStack(spacing: 15) {
                     VStack {
                         Text("Tap the flag of")
@@ -60,9 +64,6 @@ struct ContentView: View {
 //                Text("Score: \(playerScore)")
 //                    .foregroundColor(.white)
 //                    .font(.title.bold())
-                Text("Question \(question) of \(numberOfQuestions)")
-                    .foregroundColor(.white)
-                    .font(.title.bold())
                 
                 Spacer()
             }
