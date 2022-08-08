@@ -18,6 +18,17 @@ struct ContentView: View {
     
     private var numberOfQuestions = 8
     
+    struct ImageView: View {
+        var image: String
+        
+        var body: some View {
+            Image(image)
+                .renderingMode(.original)
+                .clipShape(Capsule())
+                .shadow(radius: 5)
+        }
+    }
+    
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -46,10 +57,7 @@ struct ContentView: View {
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .renderingMode(.original)
-                                .clipShape(Capsule())
-                                .shadow(radius: 5)
+                            ImageView(image: countries[number])
                         }
                     }
                 }
