@@ -18,8 +18,8 @@ struct ContentView: View {
     // Project 6 - Challange 1
     @State private var isCorrect = false
     @State private var selectedNumber = 0
-    // Project 6 - Challange 2
-    @State private var isOpacity = false
+    // Project 6 - Challange 2 & 3
+    @State private var isIncorrect = false
     
     private var numberOfQuestions = 8
     
@@ -66,8 +66,12 @@ struct ContentView: View {
                         } label: {
                             ImageView(image: countries[number])
                         }
+                        // Project 6 - Challange 1
                         .rotation3DEffect(.degrees(isCorrect && selectedNumber == number ? 360 : 0), axis: (x: 0, y: 1, z: 0))
-                        .opacity(isOpacity && selectedNumber != number ? 0.25 : 1)
+                        // Project 6 - Challange 2
+                        .opacity(isIncorrect && selectedNumber != number ? 0.25 : 1)
+                        // Project 6 - Challange 3
+                        .scaleEffect(isIncorrect && selectedNumber != number ? 0.5 : 1)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -107,7 +111,7 @@ struct ContentView: View {
             scoreTitle = "Correct!"
             playerScore += 1
             isCorrect = true
-            isOpacity = true
+            isIncorrect = true
         } else {
             scoreTitle = """
                             Wrong!
@@ -124,7 +128,7 @@ struct ContentView: View {
             correctAnswer = Int.random(in: 0...2)
             question += 1
             isCorrect = false
-            isOpacity = false
+            isIncorrect = false
         } else {
             questionsAlert = true
         }
