@@ -18,6 +18,8 @@ struct ContentView: View {
     // Project 6 - Challange 1
     @State private var isCorrect = false
     @State private var selectedNumber = 0
+    // Project 6 - Challange 2
+    @State private var isOpacity = false
     
     private var numberOfQuestions = 8
     
@@ -65,6 +67,7 @@ struct ContentView: View {
                             ImageView(image: countries[number])
                         }
                         .rotation3DEffect(.degrees(isCorrect && selectedNumber == number ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+                        .opacity(isOpacity && selectedNumber != number ? 0.25 : 1)
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -104,6 +107,7 @@ struct ContentView: View {
             scoreTitle = "Correct!"
             playerScore += 1
             isCorrect = true
+            isOpacity = true
         } else {
             scoreTitle = """
                             Wrong!
@@ -120,6 +124,7 @@ struct ContentView: View {
             correctAnswer = Int.random(in: 0...2)
             question += 1
             isCorrect = false
+            isOpacity = false
         } else {
             questionsAlert = true
         }
