@@ -15,6 +15,9 @@ struct ContentView: View {
     @State private var playerScore = 0
     @State private var question = 1
     @State private var questionsAlert = false
+    // Project 6 - Challange 1
+    @State private var isCorrect = false
+    @State private var selectedNumber = 0
     
     private var numberOfQuestions = 8
     
@@ -55,10 +58,13 @@ struct ContentView: View {
                     
                     ForEach(0..<3) {number in
                         Button {
-                            flagTapped(number)
+                            withAnimation {
+                                flagTapped(number)
+                            }
                         } label: {
                             ImageView(image: countries[number])
                         }
+                        .rotation3DEffect(.degrees(isCorrect && selectedNumber == number ? 360 : 0), axis: (x: 0, y: 1, z: 0))
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -93,9 +99,11 @@ struct ContentView: View {
     }
     
     func flagTapped(_ number: Int) {
+        selectedNumber = number
         if number == correctAnswer {
             scoreTitle = "Correct!"
             playerScore += 1
+            isCorrect = true
         } else {
             scoreTitle = """
                             Wrong!
@@ -111,6 +119,7 @@ struct ContentView: View {
             countries.shuffle()
             correctAnswer = Int.random(in: 0...2)
             question += 1
+            isCorrect = false
         } else {
             questionsAlert = true
         }
