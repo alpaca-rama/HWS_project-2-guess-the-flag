@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  GuessTheFlag
 //
-//  Created by Paul Hudson on 20/10/2021.
+//  Created by Luca Capriati on 2022/08/22.
 //
 // Challanges:
 // Project 2 - Challange 1: Add an @State property to store the user’s score, modify it when they get an answer right or wrong,
