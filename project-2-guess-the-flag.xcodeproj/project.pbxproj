@@ -11,6 +11,7 @@
 		81DF19F9289D8E5900E1DCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DF19F8289D8E5900E1DCB0 /* ContentView.swift */; };
 		81DF19FB289D8E5E00E1DCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DF19FA289D8E5E00E1DCB0 /* Assets.xcassets */; };
 		81DF19FE289D8E5E00E1DCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DF19FD289D8E5E00E1DCB0 /* Preview Assets.xcassets */; };
+		81E3E32B28B39CDE00163F38 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E3E32A28B39CDE00163F38 /* FlagImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		81DF19F8289D8E5900E1DCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		81DF19FA289D8E5E00E1DCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81DF19FD289D8E5E00E1DCB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81E3E32A28B39CDE00163F38 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				81DF19F6289D8E5900E1DCB0 /* project_2_guess_the_flagApp.swift */,
 				81DF19F8289D8E5900E1DCB0 /* ContentView.swift */,
+				81E3E32A28B39CDE00163F38 /* FlagImage.swift */,
 				81DF19FA289D8E5E00E1DCB0 /* Assets.xcassets */,
 				81DF19FC289D8E5E00E1DCB0 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DF19F9289D8E5900E1DCB0 /* ContentView.swift in Sources */,
+				81E3E32B28B39CDE00163F38 /* FlagImage.swift in Sources */,
 				81DF19F7289D8E5900E1DCB0 /* project_2_guess_the_flagApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

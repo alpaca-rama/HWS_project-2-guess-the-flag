@@ -4,13 +4,17 @@
 //
 //  Created by Paul Hudson on 20/10/2021.
 //
+// Challanges:
 // Project 2 - Challange 1: Add an @State property to store the user’s score, modify it when they get an answer right or wrong,
 //  then display it in the alert and in the score label.
 // Project 2 - Challange 2: When someone chooses the wrong flag, tell them their mistake in your alert message –
 //  something like “Wrong! That’s the flag of France,” for example.
 // Project 2 - Challange 3: Make the game show only 8 questions, at which point they see a final alert judging their score
 //  and can restart the game.
-// Project 2 - Bonus Challange - Removing repeats
+// Project 2 - Bonus Challange: Removing repeats
+// Project 4 - Challange 2: Go back to project 2 and replace the Image view used for flags with a new FlagImage() view
+//  that renders one flag image using the specific set of modifiers we had.
+
 import SwiftUI
 
 struct ContentView: View {
@@ -56,10 +60,8 @@ struct ContentView: View {
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .renderingMode(.original)
-                                .clipShape(Capsule())
-                                .shadow(radius: 5)
+                            // Project 4 - Challange 2
+                            FlagImage(name: countries[number])
                         }
                     }
                 }
